@@ -1,0 +1,345 @@
+/* Styles for the professional Tunisian‑RDC Bridge site */
+/* CSS Variables for easy theme management */
+:root {
+  --primary-color: #006699;
+  --secondary-color: #2c3e50;
+  --background-color: #f7f9fb;
+  --card-background: #ffffff;
+  --card-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+  --icon-size: 64px;
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #004466;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 75vh;
+  background: #333 url('images/hero.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004466;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Feature cards section */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: var(--card-background);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card .icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 20%;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+}
+
+/* Services section reuse feature cards style */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--card-background);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.08);
+}
+
+.service-card .icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 20%;
+}
+
+.service-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--secondary-color);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  line-height: 1.5;
+}
+
+/* Partners section */
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.partner-card {
+  background-color: var(--card-background);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  max-width: 280px;
+  text-align: center;
+}
+
+.partner-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.partner-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.partner-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Contact page styles */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info .contact-line {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.contact-info .contact-line .icon {
+  font-size: 1.6rem;
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+}
+
+.contact-info .contact-line span {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  min-width: 320px;
+}
+
+.contact-form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccd4db;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+.contact-form-wrapper textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact-form-wrapper button {
+  align-self: flex-start;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form-wrapper button:hover {
+  background-color: #004466;
+}
+
+footer {
+  background-color: #f0f4f8;
+  color: #444;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
